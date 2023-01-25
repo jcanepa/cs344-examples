@@ -18,6 +18,7 @@ int main(void)
     if (strcmp(s, "exit") == 0)
         printf("strings are the same!\n");
 
+    // another way to create a pointer by defining the pointer to a constant (I think)
     char *foo = "exit";
     printf("%s\n", foo);
 }
