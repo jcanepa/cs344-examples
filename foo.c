@@ -1,12 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 
-void foo(void)
-{
-    char *s = "exit";
-    printf("%s\n", s);
-}
-
 int main(void)
 {
     // allocates array of 5 elements and adds them into the char array
@@ -24,5 +18,6 @@ int main(void)
     if (strcmp(s, "exit") == 0)
         printf("strings are the same!\n");
 
-    foo();
+    char *foo = "exit";
+    printf("%s\n", foo);
 }
