@@ -1,8 +1,15 @@
 #include <stdio.h>
 #include <string.h>
 
+void foo(void)
+{
+    char *s = "exit";
+    printf("%s\n", s);
+}
+
 int main(void)
 {
+    // allocates array of 5 elements and adds them into the char array
     char s[] = "exit";
 
     // pointer comparison doesn't work b/c the strings are at different places in memory
@@ -16,4 +23,6 @@ int main(void)
     // this is the way to check whether 2 strings are equal
     if (strcmp(s, "exit") == 0)
         printf("strings are the same!\n");
+
+    foo();
 }
