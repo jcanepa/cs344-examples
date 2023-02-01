@@ -17,12 +17,18 @@ int main(void)
         return 1;
     }
 
+    // char pointer (string)
     char *s = (pid == 0)
-                  ? "C"
+                  ? "C" // pointers
                   : "P";
 
+    // use & to "address of" pointer
+    char c = (pid == 0)
+                 ? 'C' // a char (individual byte)
+                 : 'P';
+
     for (int i = 0; i < 2000; i++)
-        write(fd, s, 1);
+        write(fd, &c, 1); // expects a pointer to some data: s or &c
 
     close(fd); // both processes need to close the file descriptor
 }
