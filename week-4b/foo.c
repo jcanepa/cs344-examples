@@ -28,7 +28,7 @@ int main(void)
                  : 'P';
 
     for (int i = 0; i < 2000; i++)
-        // a syscall, gives up control to OS
+        // a syscall, gives up control to OS (context switching issues an interrupt and puts registers in memory which is expensive)
         write(fd, &c, 1); // expects a pointer to some data: s or &c
 
     close(fd); // both processes need to close the file descriptor
