@@ -3,8 +3,10 @@
 
 int main(void)
 {
-    printf("Hello world!");
-    fflush(stdout);          // print this right away
+    printf("Hello world! ");
     printf("And then some"); // waits until a new line
+
+    // fflush(stdout);          // print this right away
     sleep(1);
+    printf("...finally!\n");
 }
