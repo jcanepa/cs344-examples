@@ -25,6 +25,9 @@ int main(void)
     char *mem = malloc(2048); // returns a pointer back to this addr
     // anytime you malloc ram, there's a memory leak (when not freed)
 
+    int *ints = malloc(sizeof(int) * 100); // common pattern for allocating a certain number of integers
+    int *ents = calloc(sizeof(int), 100);  // these two methods do the same thing
+
     strcpy(mem, "Hello, world!"); // copy bytes into this address
     puts(mem);
 
