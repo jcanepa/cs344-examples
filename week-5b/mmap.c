@@ -12,7 +12,7 @@ int main(void)
         PROT_READ | PROT_WRITE,
         MAP_ANON | MAP_PRIVATE,
         -1,
-        0); // should return a pointer if successful
+        0); // returns a pointer if successful
 
     if (a == MAP_FAILED)
     {
@@ -20,12 +20,12 @@ int main(void)
         return 1;
     }
 
-    printf("%p\n", a);
+    printf("%p\n", a); // print pointer format
 
     a[10] = 99;
 
     // malloc & free
-    // mmap and munmap (can't use free, cannot free things not mmallo'ed)
+    // mmap and munmap (can't use free, cannot free things not mmalloc'ed)
     munmap(a, 12 * sizeof(int));
 
     // a[10] = 99; don't use memory after you've freed it!
