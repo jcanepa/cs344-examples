@@ -13,8 +13,8 @@ int main(void)
     printf("%p\n", a + 1); // 11
                            // even though the next int is more than 1 byte (because of the data type)
 
-    print("%d\n", *(a + 1)); // 11
-    print("%d\n", a[1]);     // 11
+    printf("%d\n", *(a + 1)); // 11
+    printf("%d\n", a[1]);     // 11
     // int is 2 or 4 bytes (depends)
 
     // NULL is a pointer
