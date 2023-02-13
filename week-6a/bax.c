@@ -10,6 +10,7 @@ struct node
 
 int main(void)
 {
+    // signature from `man mmap`:
     // mmap(void *addr, size_t len, int prot, int flags, int fd, off_t offset);
     void *mem = mmap(
         NULL,
@@ -22,6 +23,10 @@ int main(void)
     // copy structure off the stack into memory (heap)
     struct node *p = mem; // void pointers can be assigned to pointers of any other type
     int *i = mem;         // can do this, nothing yet stored to this addr
+
+    printf("%p\n", mem);
+    printf("%p\n", p);
+    printf("%p\n", i);
 
     // we own the memory and we can store stuff there
     p->len = 100;
