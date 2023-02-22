@@ -25,11 +25,11 @@ int main(void)
     // struct foo f = {.c='b', .i=12}; // same as above
 
     // place something 108 bytes above s
-    // these are equivalent
+    // both lines are equivalent
     memcpy(s + 108, &f, sizeof(struct foo)); // provide a pointer to f by taking adddress-of
     // memcpy(s + 108, &f, sizeof f);           // can provide an expression where f, () are required for types (like above)
 
-    // get apointer to the struct foo in memory
+    // get a pointer to the struct foo in memory
     struct foo *fp = (struct foo *)(s + 108);
 
     printf("%s\n", s + 112);
