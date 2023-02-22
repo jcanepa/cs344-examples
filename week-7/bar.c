@@ -39,7 +39,7 @@ int main(void)
     strcpy(s + 112, "Hi!");
 
     // // update to "*i!" (a char)
-    // strcpy(s + 112, '*');
+    // strcpy(s + 112, "*");
 
     // *(s + 112) = '*';
 
